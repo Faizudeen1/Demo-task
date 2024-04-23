@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>Container with Background Image and Slider</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1152px;
+    height: 720px;
+    margin: 0 auto;
+    background-image: url('bg-cover.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .description {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: black;
+    width: 80%;
+    text-align: start;
+  }
+
+  .card-slider {
+    margin-top: 100px;
+    display: flex;
+
+  }
+
+  .card {
+    width: 225px;
+    height: 350px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-right: 0px;
+    transition: transform .2s;
+  }
+  .card:hover {
+    background-image: url('wheel-bg.jpg');
+    transform: scale(1.3);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .card-body {
+    padding: 15px;
+	text-align: center;
+  }
+
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .card-text {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+
+  .zoom22 {
+    padding: 50px;
+    transition: transform .2s;
+    width: 70px;
+    height: 350px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 64%;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: black;
+  }
+  .slick-dots {
+  display: none;
+  }
+  .slick-slide{
+    display: flex !important;
+    justify-content: center;
+    margin-left: 20px;
+    float: left;
+  }
+  @media screen and (max-width: 1152px) {
+    .container{
+      padding: 10px !important;
+    }
+    .slick-prev {
+    margin-left: 50px;
+  }
+
+  .slick-next {
+    margin-right: 50px;
+  }
+  .slick-slide{
+    margin-left: 0px;
+  }
+}
+  @media screen and (max-width: 600px) {
+    .container{
+      padding: 10px !important;
+    }
+    .slick-prev {
+    margin-left: 50px;
+  }
+
+  .slick-next {
+    margin-right: 50px;
+  }
+  .slick-slide{
+    margin-left: 0px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="description">
+      <h1>WHEEL</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+    </div>
+
+    <div class="card-slider">
+      <div class="zoom22">
+        <div class="card">
+          <img class="card-img-top" src="wpf.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">17-INCH CAST ALUMINIUM WHEEL,FULLY PAINTED SILVER LITHO</h5>
+            <p class="card-text">standard on touring FWD <br>(WGU)</p>
+          </div>
+        </div>
+      </div>
+	   <div class="zoom22">
+        <div class="card">
+          <img class="card-img-top" src="wp6.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">17-INCH CAST ALUMINIUM WHEEL,FULLY PAINTED SILVER LITHO</h5>
+            <p class="card-text">standard on touring FWD <br>(WGU)</p>
+          </div>
+        </div>
+      </div>
+	   <div class="zoom22">
+        <div class="card">
+          <img class="card-img-top" src="wjr.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">17-INCH CAST ALUMINIUM WHEEL,FULLY PAINTED SILVER LITHO</h5>
+            <p class="card-text">standard on touring FWD <br>(WGU)</p>
+          </div>
+        </div>
+      </div>
+	   <div class="zoom22">
+        <div class="card">
+          <img class="card-img-top" src="wgu.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">17-INCH CAST ALUMINIUM WHEEL,FULLY PAINTED SILVER LITHO</h5>
+            <p class="card-text">standard on touring FWD <br>(WGU)</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="slick-prev"><i class="fas fa-chevron-left"></i></div>
+  <div class="slick-next"><i class="fas fa-chevron-right"></i></div>
+  </div>
+
+  
+  <ul class="slick-dots"></ul>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('.card-slider').slick({
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+      appendDots: $('.slick-dots'),
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+
+  document.querySelector('.slick-prev').addEventListener('click', function () {
+    $('.card-slider').slick('slickPrev');
+  });
+
+  document.querySelector('.slick-next').addEventListener('click', function () {
+    $('.card-slider').slick('slickNext');
+  });
+</script>
+</body>
+</html>
